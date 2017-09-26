@@ -1,0 +1,39 @@
+<div id="experience" class="ui top attached segment">
+  <h2><i class="travel icon"></i> Experience</h2>
+</div>
+
+<div class="ui attached segment">
+  <div class="ui items">
+
+    {% for experience in experiences %}
+      <div class="item">
+        <div class="content">
+
+          <!-- Organisation name -->
+          <span class="header">
+            {{ experience.organisation }}
+            <small>{{ experience.organisation_sub }}</small>
+          </span>
+
+          <!-- Position Title and Time Employed -->
+          <div class="meta">
+            <span>{{ experience.position }}</span>|
+            <span>{{ experience.date_start }} - {{ experience.date_end }}</span>
+          </div>
+
+          <!-- Position Description -->
+          <div class="description">
+            <p>{{ experience.description }}</p>
+            {% if experience.task_lists is defined %}
+              <ul>
+                  {% for task in experience.task_lists %}
+                    <li>{{ task }}</li>
+                  {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

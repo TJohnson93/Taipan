@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+      <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% include 'partials/navigation.html' %}
+    <div id="page">
+
+      {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+      {% block footer %}
+        Made with <i class="heart icon" style="color:red"></i> by Todd Johnson
+      {% endblock %}
+    </div>
+  </body>
+</html>

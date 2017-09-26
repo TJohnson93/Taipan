@@ -1,0 +1,33 @@
+<div class="ui basic segment certs">
+  <div class="ui horizontal divider">
+    <h2>
+      <i class="certificate icon"></i>
+      Certificates <span class="hide_mobile"> / Certifications </span>
+      <i class="certificate icon"></i>
+    </h2>
+  </div>
+</div>
+
+<div class="ui doubling four column stackable grid badges">
+  <div class="stretched row">
+
+    {% for cert in certificates %}
+      <div class="column documentation" data-content="{{ cert.data }}">
+        <div class="ui segment badge">
+          {% if cert.completed is defined %}
+            <div class="ui circular image icon-{{ cert.sprite }} badge-image"></div>
+            <p><strong>{{ cert.title }}</strong></p>
+            <p>{{ cert.company }}</p>
+            {% if cert.expiry_date is defined %}
+              <p>Expiry: {{ cert.expiry_date }}</p>
+            {% endif %}
+          {% else %}
+            <div class="ui active dimmer">
+              <div class="ui medium text loader">Obtaining Qualification</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

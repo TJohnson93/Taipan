@@ -1,0 +1,146 @@
+
+/*
+	Global Styles
+ */
+html {
+	// font-family: "Lato", "Helvetica Neue", Helvetica,Arial, sans-serif;
+	font-family: @font-body;
+	color: @font-body-color;
+}
+
+// Fix for Semantic-UI sidebar
+// http://semantic-ui.com/modules/sidebar.html#ios-sidebars
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+html.ios,
+html.ios body {
+  height: initial !important;
+}
+
+body{
+	background:#ededee;
+}
+
+h2 {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	line-height: 1.4;
+	font-weight: 100;
+}
+
+.documentation {
+	cursor: pointer;
+}
+
+.content-container {
+	margin: -250px auto 0;
+	position: relative;
+}
+
+.ui.tag.label {
+	margin-bottom: 10px;
+}
+
+img.bordered {
+	padding: 5px;
+	background-color: #ffffff !important;
+}
+
+
+/*
+	Modernizr Styles
+*/
+.no-flexbox #page{
+	display: none;
+}
+.flexbox #no-flexbox {
+	display: none;
+}
+
+
+/*
+	Menu Section
+ */
+
+.ui.fixed.menu .item{
+	line-height: 52px;
+	color: #3c3f47;
+	font-size: 18px;
+	font-weight: normal;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+	// font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+
+	&::before {
+		background: transparent;
+	}
+}
+
+.ui[class*="top fixed"].menu{
+	border-right: none;
+}
+
+.top.fixed.menu {
+	z-index: 2000;
+}
+
+/*
+	Footer Section
+ */
+
+.footer {
+	background: #31343b;
+	padding: 10px;
+	color: #a3a5a9;
+	margin-top: 40px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.fixed.menu .item{
+  	padding-top: 0px;
+		padding-bottom: 0px;
+  }
+
+	.hamburger{
+		display: block;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		background-color: #000000;
+		padding: 15px;
+		z-index: 10000;
+		text-align: center;
+		border: 1px solid #3c3f47;
+		border-radius: 7px;
+		color: #3c3f47;
+		font-size: 18px;
+		font-weight: normal;
+		font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+    a{
+    	display: none;
+    }
+
+		i.icon{
+			height: 0;
+			margin: 0;
+		}
+	}
+
+	.item.right{
+  	width: 100%;
+  	text-align: center;
+  	div{
+  		margin: 0 auto;
+  	}
+  }
+
+  .ui.grid.container {
+    width: auto !important;
+  }
+}

@@ -1,0 +1,48 @@
+<!-- Segment Header - Volunteer Work -->
+<div id="volunteer" class="ui top attached segment">
+  <h2><i class="globe icon"></i> Volunteer Work</h2>
+</div>
+
+<!-- Segment Content - Volunteer Work -->
+<div class="ui attached segment">
+  <div class="ui items">
+
+
+    {% for vol_work in volunteer_work %}
+
+      <!-- Volunteer Work Item -->
+      <div class="item">
+        <div class="content">
+
+          <!-- Organisation -->
+          <span class="header">{{ vol_work.organisation }}</span>
+
+          <!-- Position/Title and Start/End dates -->
+          <div class="meta">
+            <span>{{ vol_work.title }}</span> |
+            <span>{{ vol_work.date_start }} - {{ vol_work.date_end }}</span>
+          </div>
+
+          <!-- Description of Volunteer Work -->
+          <div class="description">
+            <p>{{ vol_work.description }}</p>
+          </div>
+
+          <!--  -->
+          {% if vol_work.attachments is defined %}
+            <div class="extra">
+              {% for attachment in vol_work.attachments%}
+                <div class="ui label">
+                  <a class="documentation" href="#" data-content="{{ attachment.src }}">
+                    View {{ attachment.type }}
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

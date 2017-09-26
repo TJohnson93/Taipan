@@ -1,0 +1,19 @@
+/****************************************************
+* Filename: app.less
+* Date Created: 26/09/2017
+* Original Author: Todd Johnson
+* Description: Imports partial less files into one less
+*              file for conversion and minification by
+*              Grunt.
+*
+*****************************************************/
+
+// Import Vendor specific styles
+@import (less) '../../components/semantic/src/semantic.less';
+
+// Import custom global styles
+@import (less) '_variables.less';
+@import (less) '_global.less';
+
+// Import custom page specific styles
+@import (less) '_resume.less';

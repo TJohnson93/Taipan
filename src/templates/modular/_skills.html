@@ -1,0 +1,32 @@
+<div id="skills" class="ui top attached segment">
+  <h2><i class="lab icon"></i> My Top Skills</h2>
+</div>
+
+<div class="ui attached segment">
+  <div class="ui divided items">
+
+    <!-- General Skills -->
+    <div class="ui horizontal divider">General</div>
+    {% for skills in general_skills %}
+      {% for skill in skills %}
+        <a class="ui tag label">{{ skill }}</a>
+      {% endfor %}
+    {% endfor %}
+
+    <!-- Technical Skills -->
+    <div class="ui horizontal divider">Technical</div>
+    {% for skills in technical_skills %}
+      {% for skill in skills %}
+        <a class="ui tag label">{{ skill }}</a>
+      {% endfor %}
+    {% endfor %}
+
+    <!-- Technical Skills -->
+    <div class="ui horizontal divider">Developer</div>
+    {% for skills in developer_skills %}
+      {% for skill in skills %}
+        <a class="ui tag label">{{ skill }}</a>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,48 @@
+{% extends "partials/base.html" %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+  <div class="container ui" style="margin-top:125px;">
+    <div class="ui stackable grid container">
+      <div class="sixteen wide tablet eleven wide computer column">
+        <div class="ui basic segment">
+          <h1>Blog</h1>
+        </div>
+      </div>
+      <div class="sixteen wide tablet eleven wide computer column">
+
+        {% for post in posts %}
+        <div class="ui segment post">
+          <div class="post-image" style="max-width:100%;height:250px;overflow:hidden">
+            <img src="{{ url_for('static', filename='img/' + post.banner + '')}}" style="max-width:100%;"/>
+            <!-- <img src="{{ url_for('static', filename='content/posts/assets/' + post.title + '/' + post.banner + '')}}" style="max-width:100%;"/> -->
+          </div>
+          <h2>
+            <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+              {{ post.title }}
+            </a>
+            <small>{{ post.date_long }}</small>
+          </h2>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="sixteen wide tablet five wide computer column">
+        <h2>Archive</h2>
+        <hr />
+      </div>
+
+      <!-- Pagination -->
+      <!-- <div class="sixteen wide tablet eleven wide computer column">
+        <div class="ui pagination menu">
+          <a class="active item">1</a>
+          <a class="item">2</a>
+          <a class="item">3</a>
+          <a class="item">4</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+{% endblock %}

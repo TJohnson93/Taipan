@@ -1,0 +1,16 @@
+education:
+  course:
+    course: Diploma of Information Technology (Software Development)
+    institute: Gold Coast Institute of Tafe
+    date_start: 2012
+    date_end: 2012
+    sprite: logo_tafe_gold_coast
+    tags:
+      - icon: globe
+        text: Nationally Recognised
+    attachment_available: true
+    attachments:
+      - type: Diploma
+        src: cert_gcit_diploma
+      - type: Transcript
+        src: cert_gcit_diploma_transcript

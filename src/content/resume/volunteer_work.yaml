@@ -1,0 +1,10 @@
+volunteer_work:
+  - organisation: Beaudesert Warriors Rugby Union Club,
+    title: Rugby Coach,
+    date_start: Jan 2009,
+    date_end: Jan 2011,
+    description: In my mid teens I volunteered to coach Junior Rugby Union after a junior teams coach moved towns. I took on the responsibilities involved in teaching young players how to safely play rugby. I was able to teach them the ball skills and defensive skills required for them to progress in the later years. I made it a priority to train the players in a way that minimised injury and was still perform the many tasks required in a game of Rugby.,
+    attachments:
+      - type: Written Reference,
+        src: bwruc_ref
+}]

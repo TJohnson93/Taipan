@@ -1,0 +1,6 @@
+# Bower and Node dev files
+src/components/*
+node_modules/*
+
+# Python Virtual Environment dev files
+venv/*

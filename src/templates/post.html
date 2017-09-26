@@ -1,0 +1,17 @@
+{% extends "partials/base.html" %}
+{% block title %}Blog - {{ post.title }}{% endblock %}
+
+{% block content %}
+
+  <div class="container ui"  style="margin-top:125px;">
+    <div class="ui stackable segment grid container">
+      <div class="sixteen wide tablet sixteen wide computer column">
+        <div class="ui cover" style="height: 350px;"></div>
+        <h1 align="center">{{ post.title }}</h1>
+        <p align="center">Author: {{ post.author }} | Date Created: {{ post.date_long }}</p>
+        {{ post.html | safe }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<div id="education" class="ui top attached segment">
+  <h2><i class="student icon"></i> Education</h2>
+</div>
+
+<div class="ui attached segment">
+  <div class="ui divided items">
+
+    {% for course in courses %}
+
+      <div class="item">
+        <div class="image">
+          <div class="edu_logo_custom icon-{{course.sprite}}"></div>
+        </div>
+
+        <div class="content">
+          <span class="header">{{ course.course }}</span>
+          <div class="meta">
+            <span class="institute">{{ course.institute }}</span>|
+            <span class="dates">{{ course.date_start }} - {{ course.date_end }}</span>
+          </div>
+
+          <div class="description"></div>
+
+          <div class="extra">
+            <!-- Loop through tags -->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+  </div>
+</div>

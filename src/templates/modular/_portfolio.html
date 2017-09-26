@@ -1,0 +1,22 @@
+<!-- Segment Header - Portfolio -->
+<div class="ui container portfolio">
+  <div class="ui horizontal divider">
+    <h2><i class="write icon"></i> Portfolio <i class="write icon"></i></h2>
+  </div>
+</div>
+
+<!--  -->
+<div class="ui grid">
+  <div class="doubling four column stackable stretched row">
+
+    {% for project in projects %}
+      <div class="column">
+        <div class="ui rounded image viewport">
+          <a href="{{ project.link }}" target="_blank">
+            
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
