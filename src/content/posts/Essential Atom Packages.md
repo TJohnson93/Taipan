@@ -39,3 +39,11 @@ Lorem Ipsum.
 ## Minimap
 
 ...
+
+## Pretty JSON
+
+...
+
+## Todo-Show
+
+...
